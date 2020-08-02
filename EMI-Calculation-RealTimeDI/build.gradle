@@ -1,0 +1,30 @@
+plugins {
+    // Apply the java-library plugin to add support for Java Library
+    id 'application'
+}
+
+mainClassName="com.emi.client.RealTimeDI"
+	run{
+   standardInput=System.in
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	
+	// https://mvnrepository.com/artifact/junit/junit
+	implementation group: 'junit', name: 'junit', version: '4.13'
+	
+	// https://mvnrepository.com/artifact/org.springframework/spring-context-support
+	implementation group: 'org.springframework', name: 'spring-context-support', version: '5.2.8.RELEASE'
+
+	// https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+	implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.2.8.RELEASE'
+	
+	// https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc8
+	implementation group: 'com.oracle.database.jdbc', name: 'ojdbc8', version: '19.7.0.0'
+
+
+}
